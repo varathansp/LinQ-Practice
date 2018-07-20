@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="db" Class="ProductDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LTPMAN022344867;Initial Catalog=db;Integrated Security=True" SettingsObjectName="LinQForm1st.Properties.Settings" SettingsPropertyName="dbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EmployeeDetails" Member="EmployeeDetails">
+    <Type Name="EmployeeDetail">
+      <Column Name="EmpID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmpName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DeptCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.customer" Member="customers">
+    <Type Name="customer">
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CustomerMail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.product" Member="products">
+    <Type Name="product">
+      <Column Name="categoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="productID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="productName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="productLocation" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="productCost" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="productLocalTransport" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="category_product" Member="category" ThisKey="categoryID" OtherKey="categoryID" Type="category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.category" Member="categories">
+    <Type Name="category">
+      <Column Name="categoryID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="categoryName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="category_product" Member="products" ThisKey="categoryID" OtherKey="categoryID" Type="product" />
+    </Type>
+  </Table>
+</Database>
