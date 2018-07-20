@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ProjectDB">
+  <DataContextMoniker Name="/ProjectDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="af73fd64-940e-48dd-b2c9-aa3eb6f70902" absoluteBounds="0.5, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/ProjectDBDataContext/category" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a4e02e0-decb-4be3-a685-bb2294881737" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="001f6e43-cc15-4e0f-9d40-2707660e482f" absoluteBounds="5.25, 2.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/ProjectDBDataContext/EmployeeDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e879005-c2ba-4a8f-9b1d-c19ca99cfd9e" absoluteBounds="5.265, 2.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b1024e73-a2d3-4bb1-a739-655cc65d8155" absoluteBounds="0.5, 2.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/ProjectDBDataContext/customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d703db8-0739-4f54-a08d-41327b41a99b" absoluteBounds="0.51500000000000012, 2.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a25da04b-37b0-47ef-bc69-b7a474e8730d" absoluteBounds="3.125, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/ProjectDBDataContext/product1" />
+      <nestedChildShapes>
+        <elementListCompartment Id="776d9fbf-aaa0-4588-a452-389f5f27b8b8" absoluteBounds="3.14, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 1.09699625651042); (3.125 : 1.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ProjectDBDataContext/category/category_product1" />
+      <nodes>
+        <classShapeMoniker Id="af73fd64-940e-48dd-b2c9-aa3eb6f70902" />
+        <classShapeMoniker Id="a25da04b-37b0-47ef-bc69-b7a474e8730d" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
